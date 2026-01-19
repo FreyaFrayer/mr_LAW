@@ -1,0 +1,160 @@
+{
+  "format": "panda_ik_benchmark_summary",
+  "format_version": 1,
+  "human_readable": {
+    "lines": [
+      "Greedy baseline (traditional, segment-wise optimal)",
+      "",
+      "method: greedy",
+      "total_paths_theoretical: 40000",
+      "",
+      "Time model:",
+      "  requested: totg",
+      "  effective: totg",
+      "  totg_available: True",
+      "",
+      "p0 (ready) joint_positions = [0.0000, -0.7850, 0.0000, -2.3560, 0.0000, 1.5710, 0.7850]",
+      "",
+      "IK sampling overview:",
+      "  p1: found 200/200  (resample_trials_used=1, passes_used=1)",
+      "  p2: found 200/200  (resample_trials_used=1, passes_used=1)",
+      "",
+      "Targets (Cartesian positions, meters):",
+      "  p1: (0.3554, 0.0558, 0.2603)",
+      "  p2: (-0.0028, 0.0875, 0.4817)",
+      "",
+      "p0->p1 success: 200/200",
+      "t1 (min p0->p1): 1.0405s at p1_143 (attempt=148) joint_positions = [-0.4432, -0.2775, 0.6707, -2.8385, 0.3332, 2.5941, 1.9823]",
+      "",
+      "p1->p2 success: 200/200",
+      "t2 (min p1->p2): 1.7563s at p2_31 (attempt=68) joint_positions = [1.5046, -1.7227, 0.0311, -2.9042, 0.0332, 1.1816, 0.2736]",
+      "",
+      "Total time (t1+t2+...+tn) = 2.796820 s"
+    ]
+  },
+  "ik_sampling_overview": [
+    {
+      "accepted_with_shortfall": false,
+      "found": 200,
+      "note": "",
+      "passes_used": 1,
+      "point": "p1",
+      "reason": "ok",
+      "requested": 200,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    },
+    {
+      "accepted_with_shortfall": false,
+      "found": 200,
+      "note": "",
+      "passes_used": 1,
+      "point": "p2",
+      "reason": "ok",
+      "requested": 200,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    }
+  ],
+  "meta": {
+    "method": "greedy",
+    "time_model": {
+      "effective": "totg",
+      "note": "",
+      "requested": "totg",
+      "totg_available": true,
+      "totg_failures": 0
+    },
+    "timestamp": "20260116_050151",
+    "total_paths_theoretical": 40000
+  },
+  "segments": [
+    {
+      "best": {
+        "attempt": 148,
+        "joint_positions": [
+          -0.4432032655192941,
+          -0.27746443720811537,
+          0.6707347301032758,
+          -2.8384754911623493,
+          0.3332315310723761,
+          2.594146848192824,
+          1.9822709773557132
+        ],
+        "solution_id": "p1_143",
+        "solution_index_0based": 142,
+        "solution_index_1based": 143,
+        "time_s": 1.040549150288527
+      },
+      "from": "p0",
+      "segment_index": 1,
+      "string": "t1 (min p0->p1): 1.0405s at p1_143 (attempt=148)",
+      "success": {
+        "found": 200,
+        "requested": 200
+      },
+      "to": "p1"
+    },
+    {
+      "best": {
+        "attempt": 68,
+        "joint_positions": [
+          1.5046001480029962,
+          -1.72274923708711,
+          0.031102499513060135,
+          -2.9042289434489,
+          0.033230228150059916,
+          1.1816011797708288,
+          0.27362899844128696
+        ],
+        "solution_id": "p2_31",
+        "solution_index_0based": 30,
+        "solution_index_1based": 31,
+        "time_s": 1.756270649120207
+      },
+      "from": "p1",
+      "segment_index": 2,
+      "string": "t2 (min p1->p2): 1.7563s at p2_31 (attempt=68)",
+      "success": {
+        "found": 200,
+        "requested": 200
+      },
+      "to": "p2"
+    }
+  ],
+  "start": {
+    "joint_positions": [
+      0.0,
+      -0.785,
+      0.0,
+      -2.356,
+      0.0,
+      1.571,
+      0.785
+    ],
+    "label": "ready",
+    "name": "p0"
+  },
+  "targets": [
+    {
+      "name": "p1",
+      "x": 0.3554134447060151,
+      "y": 0.055810859923994725,
+      "z": 0.2603154394423799
+    },
+    {
+      "name": "p2",
+      "x": -0.0027810436086067314,
+      "y": 0.0874943776131774,
+      "z": 0.48167224154660176
+    }
+  ],
+  "title": "Greedy baseline (traditional, segment-wise optimal)",
+  "total_time_s": 2.796819799408734,
+  "total_time_string": "Total time (t1+t2+...+tn) = 2.796820 s",
+  "units": {
+    "cartesian_position": "m",
+    "joint_position": "rad",
+    "time": "s"
+  }
+}

@@ -1,0 +1,352 @@
+{
+  "format": "panda_ik_benchmark_summary",
+  "format_version": 1,
+  "human_readable": {
+    "lines": [
+      "Greedy baseline (traditional, segment-wise optimal)",
+      "",
+      "method: greedy",
+      "total_paths_theoretical: 244140625000000",
+      "",
+      "Time model:",
+      "  requested: totg",
+      "  effective: totg",
+      "  totg_available: True",
+      "",
+      "p0 (ready) joint_positions = [0.0000, -0.7850, 0.0000, -2.3560, 0.0000, 1.5710, 0.7850]",
+      "",
+      "IK sampling overview:",
+      "  p1: found 250/250  (resample_trials_used=1, passes_used=1)",
+      "  p2: found 250/250  (resample_trials_used=1, passes_used=1)",
+      "  p3: found 250/250  (resample_trials_used=1, passes_used=1)",
+      "  p4: found 250/250  (resample_trials_used=1, passes_used=1)",
+      "  p5: found 250/250  (resample_trials_used=1, passes_used=1)",
+      "  p6: found 250/250  (resample_trials_used=1, passes_used=1)",
+      "",
+      "Targets (Cartesian positions, meters):",
+      "  p1: (0.1422, -0.0049, 0.1614)",
+      "  p2: (-0.3572, 0.4749, 0.3093)",
+      "  p3: (-0.1336, 0.1363, 0.4163)",
+      "  p4: (-0.0610, 0.2736, 0.7108)",
+      "  p5: (-0.2375, -0.1358, 0.2681)",
+      "  p6: (-0.1630, 0.2772, 0.8103)",
+      "",
+      "p0->p1 success: 250/250",
+      "t1 (min p0->p1): 1.5926s at p1_32 (attempt=44) joint_positions = [-0.8546, 0.0566, 1.2535, -3.0718, 2.3400, 3.2164, 2.8615]",
+      "",
+      "p1->p2 success: 250/250",
+      "t2 (min p1->p2): 1.2961s at p2_59 (attempt=92) joint_positions = [0.1686, -0.6912, 1.9155, -1.9803, 0.7681, 2.0995, 1.0969]",
+      "",
+      "p2->p3 success: 250/250",
+      "t3 (min p2->p3): 1.4313s at p3_55 (attempt=67) joint_positions = [1.4475, -1.6515, 0.6404, -2.9587, 0.6575, 1.3442, 0.6983]",
+      "",
+      "p3->p4 success: 250/250",
+      "t4 (min p3->p4): 1.1439s at p4_118 (attempt=121) joint_positions = [0.4324, -1.0469, 0.5039, -1.9365, 0.5153, 1.0132, 1.1857]",
+      "",
+      "p4->p5 success: 250/250",
+      "t5 (min p4->p5): 1.5655s at p5_233 (attempt=270) joint_positions = [2.5758, -1.7628, 1.4243, -2.9703, 1.4594, 1.3567, 0.1096]",
+      "",
+      "p5->p6 success: 250/250",
+      "t6 (min p5->p6): 1.5035s at p6_30 (attempt=30) joint_positions = [0.6056, -0.7478, 0.6016, -1.4283, 0.5372, 0.8512, 0.3124]",
+      "",
+      "Total time (t1+t2+...+tn) = 8.532808 s"
+    ]
+  },
+  "ik_sampling_overview": [
+    {
+      "accepted_with_shortfall": false,
+      "found": 250,
+      "note": "",
+      "passes_used": 1,
+      "point": "p1",
+      "reason": "ok",
+      "requested": 250,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    },
+    {
+      "accepted_with_shortfall": false,
+      "found": 250,
+      "note": "",
+      "passes_used": 1,
+      "point": "p2",
+      "reason": "ok",
+      "requested": 250,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    },
+    {
+      "accepted_with_shortfall": false,
+      "found": 250,
+      "note": "",
+      "passes_used": 1,
+      "point": "p3",
+      "reason": "ok",
+      "requested": 250,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    },
+    {
+      "accepted_with_shortfall": false,
+      "found": 250,
+      "note": "",
+      "passes_used": 1,
+      "point": "p4",
+      "reason": "ok",
+      "requested": 250,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    },
+    {
+      "accepted_with_shortfall": false,
+      "found": 250,
+      "note": "",
+      "passes_used": 1,
+      "point": "p5",
+      "reason": "ok",
+      "requested": 250,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    },
+    {
+      "accepted_with_shortfall": false,
+      "found": 250,
+      "note": "",
+      "passes_used": 1,
+      "point": "p6",
+      "reason": "ok",
+      "requested": 250,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    }
+  ],
+  "meta": {
+    "method": "greedy",
+    "time_model": {
+      "effective": "totg",
+      "note": "",
+      "requested": "totg",
+      "totg_available": true,
+      "totg_failures": 0
+    },
+    "timestamp": "20260116_075350",
+    "total_paths_theoretical": 244140625000000
+  },
+  "segments": [
+    {
+      "best": {
+        "attempt": 44,
+        "joint_positions": [
+          -0.8545835220245326,
+          0.05657873961292124,
+          1.2534651937862775,
+          -3.0718,
+          2.34001202107659,
+          3.216441468484926,
+          2.8614983272364474
+        ],
+        "solution_id": "p1_32",
+        "solution_index_0based": 31,
+        "solution_index_1based": 32,
+        "time_s": 1.5925563299144605
+      },
+      "from": "p0",
+      "segment_index": 1,
+      "string": "t1 (min p0->p1): 1.5926s at p1_32 (attempt=44)",
+      "success": {
+        "found": 250,
+        "requested": 250
+      },
+      "to": "p1"
+    },
+    {
+      "best": {
+        "attempt": 92,
+        "joint_positions": [
+          0.16862124627826502,
+          -0.6911701738382353,
+          1.9154943230010848,
+          -1.9803428587486727,
+          0.7681448971632635,
+          2.0994760716889047,
+          1.0968931806179638
+        ],
+        "solution_id": "p2_59",
+        "solution_index_0based": 58,
+        "solution_index_1based": 59,
+        "time_s": 1.2960737262457334
+      },
+      "from": "p1",
+      "segment_index": 2,
+      "string": "t2 (min p1->p2): 1.2961s at p2_59 (attempt=92)",
+      "success": {
+        "found": 250,
+        "requested": 250
+      },
+      "to": "p2"
+    },
+    {
+      "best": {
+        "attempt": 67,
+        "joint_positions": [
+          1.4475317895311104,
+          -1.6515200318732977,
+          0.6403732398984945,
+          -2.9587451416248864,
+          0.6575339822017533,
+          1.3442413547433159,
+          0.6982863404669352
+        ],
+        "solution_id": "p3_55",
+        "solution_index_0based": 54,
+        "solution_index_1based": 55,
+        "time_s": 1.4313442507734941
+      },
+      "from": "p2",
+      "segment_index": 3,
+      "string": "t3 (min p2->p3): 1.4313s at p3_55 (attempt=67)",
+      "success": {
+        "found": 250,
+        "requested": 250
+      },
+      "to": "p3"
+    },
+    {
+      "best": {
+        "attempt": 121,
+        "joint_positions": [
+          0.4323826329777124,
+          -1.0468891731028374,
+          0.5039425561191201,
+          -1.9365095150661675,
+          0.5152632549565139,
+          1.0131564416267373,
+          1.1857239186218813
+        ],
+        "solution_id": "p4_118",
+        "solution_index_0based": 117,
+        "solution_index_1based": 118,
+        "time_s": 1.1438800645962524
+      },
+      "from": "p3",
+      "segment_index": 4,
+      "string": "t4 (min p3->p4): 1.1439s at p4_118 (attempt=121)",
+      "success": {
+        "found": 250,
+        "requested": 250
+      },
+      "to": "p4"
+    },
+    {
+      "best": {
+        "attempt": 270,
+        "joint_positions": [
+          2.575838180905525,
+          -1.762799995765308,
+          1.4243350266514605,
+          -2.9702909392380805,
+          1.4593977191611165,
+          1.356711358838474,
+          0.10959339130252341
+        ],
+        "solution_id": "p5_233",
+        "solution_index_0based": 232,
+        "solution_index_1based": 233,
+        "time_s": 1.565496803645028
+      },
+      "from": "p4",
+      "segment_index": 5,
+      "string": "t5 (min p4->p5): 1.5655s at p5_233 (attempt=270)",
+      "success": {
+        "found": 250,
+        "requested": 250
+      },
+      "to": "p5"
+    },
+    {
+      "best": {
+        "attempt": 30,
+        "joint_positions": [
+          0.6056004112075837,
+          -0.7477868668122193,
+          0.6015749091426033,
+          -1.4282840714668898,
+          0.5371918952566015,
+          0.8511883036962957,
+          0.31242914941591804
+        ],
+        "solution_id": "p6_30",
+        "solution_index_0based": 29,
+        "solution_index_1based": 30,
+        "time_s": 1.5034572246185136
+      },
+      "from": "p5",
+      "segment_index": 6,
+      "string": "t6 (min p5->p6): 1.5035s at p6_30 (attempt=30)",
+      "success": {
+        "found": 250,
+        "requested": 250
+      },
+      "to": "p6"
+    }
+  ],
+  "start": {
+    "joint_positions": [
+      0.0,
+      -0.785,
+      0.0,
+      -2.356,
+      0.0,
+      1.571,
+      0.785
+    ],
+    "label": "ready",
+    "name": "p0"
+  },
+  "targets": [
+    {
+      "name": "p1",
+      "x": 0.14219310504239474,
+      "y": -0.004881379054485005,
+      "z": 0.16140484062072843
+    },
+    {
+      "name": "p2",
+      "x": -0.3571776240024099,
+      "y": 0.47486867875078204,
+      "z": 0.30925401054002255
+    },
+    {
+      "name": "p3",
+      "x": -0.13355511710524715,
+      "y": 0.1362574047599332,
+      "z": 0.41634313304481024
+    },
+    {
+      "name": "p4",
+      "x": -0.0609932937117473,
+      "y": 0.2736419954591764,
+      "z": 0.7107584772739164
+    },
+    {
+      "name": "p5",
+      "x": -0.23753838813937952,
+      "y": -0.1358122569875763,
+      "z": 0.26806171429185
+    },
+    {
+      "name": "p6",
+      "x": -0.16304146370185885,
+      "y": 0.2772148889182396,
+      "z": 0.8103390977706376
+    }
+  ],
+  "title": "Greedy baseline (traditional, segment-wise optimal)",
+  "total_time_s": 8.532808399793481,
+  "total_time_string": "Total time (t1+t2+...+tn) = 8.532808 s",
+  "units": {
+    "cartesian_position": "m",
+    "joint_position": "rad",
+    "time": "s"
+  }
+}

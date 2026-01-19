@@ -1,0 +1,160 @@
+{
+  "format": "panda_ik_benchmark_summary",
+  "format_version": 1,
+  "human_readable": {
+    "lines": [
+      "Global optimum (DP; equivalent to exhaustive enumeration of all IK combinations)",
+      "",
+      "method: dp_global_optimal",
+      "total_paths_theoretical: 2500",
+      "",
+      "Time model:",
+      "  requested: totg",
+      "  effective: totg",
+      "  totg_available: True",
+      "",
+      "p0 (ready) joint_positions = [0.0000, -0.7850, 0.0000, -2.3560, 0.0000, 1.5710, 0.7850]",
+      "",
+      "IK sampling overview:",
+      "  p1: found 50/50  (resample_trials_used=1, passes_used=1)",
+      "  p2: found 50/50  (resample_trials_used=1, passes_used=1)",
+      "",
+      "Targets (Cartesian positions, meters):",
+      "  p1: (0.1422, -0.0049, 0.1614)",
+      "  p2: (-0.3572, 0.4749, 0.3093)",
+      "",
+      "p0->p1 success: 50/50",
+      "t1 (min p0->p1): 1.5930s at p1_49 (attempt=51) joint_positions = [-0.8525, 0.0567, 1.2508, -3.0715, 2.3412, 3.2166, 1.7388]",
+      "",
+      "p1->p2 success: 50/50",
+      "t2 (min p1->p2): 1.2888s at p2_18 (attempt=18) joint_positions = [0.1837, -0.7219, 1.8900, -1.9767, 0.8014, 2.0793, 1.5873]",
+      "",
+      "Total time (t1+t2+...+tn) = 2.881748 s"
+    ]
+  },
+  "ik_sampling_overview": [
+    {
+      "accepted_with_shortfall": false,
+      "found": 50,
+      "note": "",
+      "passes_used": 1,
+      "point": "p1",
+      "reason": "ok",
+      "requested": 50,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    },
+    {
+      "accepted_with_shortfall": false,
+      "found": 50,
+      "note": "",
+      "passes_used": 1,
+      "point": "p2",
+      "reason": "ok",
+      "requested": 50,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    }
+  ],
+  "meta": {
+    "method": "dp_global_optimal",
+    "time_model": {
+      "effective": "totg",
+      "note": "",
+      "requested": "totg",
+      "totg_available": true,
+      "totg_failures": 0
+    },
+    "timestamp": "20260116_045953",
+    "total_paths_theoretical": 2500
+  },
+  "segments": [
+    {
+      "best": {
+        "attempt": 51,
+        "joint_positions": [
+          -0.8524627832301016,
+          0.05665302596321308,
+          1.2507900837668142,
+          -3.0714987188014318,
+          2.3411609862152947,
+          3.2165567510036284,
+          1.7387632116648823
+        ],
+        "solution_id": "p1_49",
+        "solution_index_0based": 48,
+        "solution_index_1based": 49,
+        "time_s": 1.5929965464424942
+      },
+      "from": "p0",
+      "segment_index": 1,
+      "string": "t1 (min p0->p1): 1.5930s at p1_49 (attempt=51)",
+      "success": {
+        "found": 50,
+        "requested": 50
+      },
+      "to": "p1"
+    },
+    {
+      "best": {
+        "attempt": 18,
+        "joint_positions": [
+          0.18371929959837413,
+          -0.7218844100948691,
+          1.8899739972161078,
+          -1.976693856754933,
+          0.8013618948719159,
+          2.0792838135727076,
+          1.5873235530435168
+        ],
+        "solution_id": "p2_18",
+        "solution_index_0based": 17,
+        "solution_index_1based": 18,
+        "time_s": 1.2887512808389134
+      },
+      "from": "p1",
+      "segment_index": 2,
+      "string": "t2 (min p1->p2): 1.2888s at p2_18 (attempt=18)",
+      "success": {
+        "found": 50,
+        "requested": 50
+      },
+      "to": "p2"
+    }
+  ],
+  "start": {
+    "joint_positions": [
+      0.0,
+      -0.785,
+      0.0,
+      -2.356,
+      0.0,
+      1.571,
+      0.785
+    ],
+    "label": "ready",
+    "name": "p0"
+  },
+  "targets": [
+    {
+      "name": "p1",
+      "x": 0.14219310504239474,
+      "y": -0.004881379054485005,
+      "z": 0.16140484062072843
+    },
+    {
+      "name": "p2",
+      "x": -0.3571776240024099,
+      "y": 0.47486867875078204,
+      "z": 0.30925401054002255
+    }
+  ],
+  "title": "Global optimum (DP; equivalent to exhaustive enumeration of all IK combinations)",
+  "total_time_s": 2.8817478272814077,
+  "total_time_string": "Total time (t1+t2+...+tn) = 2.881748 s",
+  "units": {
+    "cartesian_position": "m",
+    "joint_position": "rad",
+    "time": "s"
+  }
+}

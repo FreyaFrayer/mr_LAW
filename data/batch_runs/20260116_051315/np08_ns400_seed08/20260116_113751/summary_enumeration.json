@@ -1,0 +1,448 @@
+{
+  "format": "panda_ik_benchmark_summary",
+  "format_version": 1,
+  "human_readable": {
+    "lines": [
+      "Global optimum (DP; equivalent to exhaustive enumeration of all IK combinations)",
+      "",
+      "method: dp_global_optimal",
+      "total_paths_theoretical: 655360000000000000000",
+      "",
+      "Time model:",
+      "  requested: totg",
+      "  effective: totg",
+      "  totg_available: True",
+      "",
+      "p0 (ready) joint_positions = [0.0000, -0.7850, 0.0000, -2.3560, 0.0000, 1.5710, 0.7850]",
+      "",
+      "IK sampling overview:",
+      "  p1: found 400/400  (resample_trials_used=1, passes_used=1)",
+      "  p2: found 400/400  (resample_trials_used=1, passes_used=1)",
+      "  p3: found 400/400  (resample_trials_used=1, passes_used=1)",
+      "  p4: found 400/400  (resample_trials_used=1, passes_used=1)",
+      "  p5: found 400/400  (resample_trials_used=1, passes_used=1)",
+      "  p6: found 400/400  (resample_trials_used=1, passes_used=1)",
+      "  p7: found 400/400  (resample_trials_used=1, passes_used=1)",
+      "  p8: found 400/400  (resample_trials_used=1, passes_used=1)",
+      "",
+      "Targets (Cartesian positions, meters):",
+      "  p1: (0.1422, -0.0049, 0.1614)",
+      "  p2: (-0.3572, 0.4749, 0.3093)",
+      "  p3: (-0.1336, 0.1363, 0.4163)",
+      "  p4: (-0.0610, 0.2736, 0.7108)",
+      "  p5: (-0.2375, -0.1358, 0.2681)",
+      "  p6: (-0.1630, 0.2772, 0.8103)",
+      "  p7: (-0.3653, -0.2299, 0.0828)",
+      "  p8: (0.1817, -0.1027, 0.6071)",
+      "",
+      "p0->p1 success: 400/400",
+      "t1 (min p0->p1): 1.6126s at p1_107 (attempt=150) joint_positions = [0.6968, 0.0598, -1.1389, -3.0581, -2.3923, 3.2213, 0.9465]",
+      "",
+      "p1->p2 success: 400/400",
+      "t2 (min p1->p2): 1.8763s at p2_270 (attempt=321) joint_positions = [-2.1221, -1.3502, -1.5136, -1.9244, -1.3442, 1.5943, -1.6978]",
+      "",
+      "p2->p3 success: 400/400",
+      "t3 (min p2->p3): 1.1465s at p3_229 (attempt=340) joint_positions = [-2.8836, -1.7628, -0.6922, -2.9381, -0.7289, 1.2243, -1.7331]",
+      "",
+      "p3->p4 success: 400/400",
+      "t4 (min p3->p4): 1.1469s at p4_300 (attempt=346) joint_positions = [-2.8973, -1.1591, -0.5062, -1.9104, -0.6037, 0.8990, -0.9817]",
+      "",
+      "p4->p5 success: 400/400",
+      "t5 (min p4->p5): 1.1726s at p5_181 (attempt=216) joint_positions = [-1.6140, -1.3881, -1.3362, -2.9845, -1.3110, 1.7150, -1.0101]",
+      "",
+      "p5->p6 success: 400/400",
+      "t6 (min p5->p6): 1.4153s at p6_166 (attempt=178) joint_positions = [-2.6083, -0.7816, -0.6012, -1.4203, -0.5752, 0.8220, -2.8973]",
+      "",
+      "p6->p7 success: 400/400",
+      "t7 (min p6->p7): 1.4468s at p7_89 (attempt=102) joint_positions = [-1.0386, -1.7628, -1.9031, -2.4199, -1.9469, 1.6392, -2.5051]",
+      "",
+      "p7->p8 success: 400/400",
+      "t8 (min p7->p8): 1.5381s at p8_40 (attempt=42) joint_positions = [0.7374, -1.3678, -0.4302, -2.3823, -0.4801, 1.0853, -1.3338]",
+      "",
+      "Total time (t1+t2+...+tn) = 11.355019 s"
+    ]
+  },
+  "ik_sampling_overview": [
+    {
+      "accepted_with_shortfall": false,
+      "found": 400,
+      "note": "",
+      "passes_used": 1,
+      "point": "p1",
+      "reason": "ok",
+      "requested": 400,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    },
+    {
+      "accepted_with_shortfall": false,
+      "found": 400,
+      "note": "",
+      "passes_used": 1,
+      "point": "p2",
+      "reason": "ok",
+      "requested": 400,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    },
+    {
+      "accepted_with_shortfall": false,
+      "found": 400,
+      "note": "",
+      "passes_used": 1,
+      "point": "p3",
+      "reason": "ok",
+      "requested": 400,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    },
+    {
+      "accepted_with_shortfall": false,
+      "found": 400,
+      "note": "",
+      "passes_used": 1,
+      "point": "p4",
+      "reason": "ok",
+      "requested": 400,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    },
+    {
+      "accepted_with_shortfall": false,
+      "found": 400,
+      "note": "",
+      "passes_used": 1,
+      "point": "p5",
+      "reason": "ok",
+      "requested": 400,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    },
+    {
+      "accepted_with_shortfall": false,
+      "found": 400,
+      "note": "",
+      "passes_used": 1,
+      "point": "p6",
+      "reason": "ok",
+      "requested": 400,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    },
+    {
+      "accepted_with_shortfall": false,
+      "found": 400,
+      "note": "",
+      "passes_used": 1,
+      "point": "p7",
+      "reason": "ok",
+      "requested": 400,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    },
+    {
+      "accepted_with_shortfall": false,
+      "found": 400,
+      "note": "",
+      "passes_used": 1,
+      "point": "p8",
+      "reason": "ok",
+      "requested": 400,
+      "resample_trials_used": 1,
+      "shortfall": 0
+    }
+  ],
+  "meta": {
+    "method": "dp_global_optimal",
+    "time_model": {
+      "effective": "totg",
+      "note": "",
+      "requested": "totg",
+      "totg_available": true,
+      "totg_failures": 0
+    },
+    "timestamp": "20260116_113751",
+    "total_paths_theoretical": 655360000000000000000
+  },
+  "segments": [
+    {
+      "best": {
+        "attempt": 150,
+        "joint_positions": [
+          0.6968448553359704,
+          0.05978324293365924,
+          -1.138868400753056,
+          -3.058090667023456,
+          -2.3923248887157746,
+          3.2213435415894387,
+          0.9465129115523655
+        ],
+        "solution_id": "p1_107",
+        "solution_index_0based": 106,
+        "solution_index_1based": 107,
+        "time_s": 1.6125995742206178
+      },
+      "from": "p0",
+      "segment_index": 1,
+      "string": "t1 (min p0->p1): 1.6126s at p1_107 (attempt=150)",
+      "success": {
+        "found": 400,
+        "requested": 400
+      },
+      "to": "p1"
+    },
+    {
+      "best": {
+        "attempt": 321,
+        "joint_positions": [
+          -2.1220544911513057,
+          -1.3502081891710684,
+          -1.513638521725593,
+          -1.9243963723257766,
+          -1.3442320974058821,
+          1.5942714208672149,
+          -1.6977592501289618
+        ],
+        "solution_id": "p2_270",
+        "solution_index_0based": 269,
+        "solution_index_1based": 270,
+        "time_s": 1.876268764163959
+      },
+      "from": "p1",
+      "segment_index": 2,
+      "string": "t2 (min p1->p2): 1.8763s at p2_270 (attempt=321)",
+      "success": {
+        "found": 400,
+        "requested": 400
+      },
+      "to": "p2"
+    },
+    {
+      "best": {
+        "attempt": 340,
+        "joint_positions": [
+          -2.8836497957984624,
+          -1.7628,
+          -0.6921610734383565,
+          -2.9380726353146716,
+          -0.7289233157859948,
+          1.2242701158546945,
+          -1.7330810050779968
+        ],
+        "solution_id": "p3_229",
+        "solution_index_0based": 228,
+        "solution_index_1based": 229,
+        "time_s": 1.146457115377744
+      },
+      "from": "p2",
+      "segment_index": 3,
+      "string": "t3 (min p2->p3): 1.1465s at p3_229 (attempt=340)",
+      "success": {
+        "found": 400,
+        "requested": 400
+      },
+      "to": "p3"
+    },
+    {
+      "best": {
+        "attempt": 346,
+        "joint_positions": [
+          -2.8973,
+          -1.1590660942747504,
+          -0.5061827457965432,
+          -1.9103923390583608,
+          -0.6037003307788839,
+          0.8989531531205294,
+          -0.98169348025726
+        ],
+        "solution_id": "p4_300",
+        "solution_index_0based": 299,
+        "solution_index_1based": 300,
+        "time_s": 1.1469223075726347
+      },
+      "from": "p3",
+      "segment_index": 4,
+      "string": "t4 (min p3->p4): 1.1469s at p4_300 (attempt=346)",
+      "success": {
+        "found": 400,
+        "requested": 400
+      },
+      "to": "p4"
+    },
+    {
+      "best": {
+        "attempt": 216,
+        "joint_positions": [
+          -1.6139889525925557,
+          -1.3880994797858677,
+          -1.336216647019648,
+          -2.984503392634614,
+          -1.3110454709127102,
+          1.7149827670401434,
+          -1.0101119305802415
+        ],
+        "solution_id": "p5_181",
+        "solution_index_0based": 180,
+        "solution_index_1based": 181,
+        "time_s": 1.1725692752847297
+      },
+      "from": "p4",
+      "segment_index": 5,
+      "string": "t5 (min p4->p5): 1.1726s at p5_181 (attempt=216)",
+      "success": {
+        "found": 400,
+        "requested": 400
+      },
+      "to": "p5"
+    },
+    {
+      "best": {
+        "attempt": 178,
+        "joint_positions": [
+          -2.6083058208506023,
+          -0.7816203035587022,
+          -0.6012145729568286,
+          -1.4202666585691774,
+          -0.5751685419399641,
+          0.8219723466757918,
+          -2.8973
+        ],
+        "solution_id": "p6_166",
+        "solution_index_0based": 165,
+        "solution_index_1based": 166,
+        "time_s": 1.415334328720898
+      },
+      "from": "p5",
+      "segment_index": 6,
+      "string": "t6 (min p5->p6): 1.4153s at p6_166 (attempt=178)",
+      "success": {
+        "found": 400,
+        "requested": 400
+      },
+      "to": "p6"
+    },
+    {
+      "best": {
+        "attempt": 102,
+        "joint_positions": [
+          -1.0385586656662325,
+          -1.7628,
+          -1.9030963353709567,
+          -2.419864367208679,
+          -1.9469162089386178,
+          1.6391692780557057,
+          -2.505077652517603
+        ],
+        "solution_id": "p7_89",
+        "solution_index_0based": 88,
+        "solution_index_1based": 89,
+        "time_s": 1.446783796102994
+      },
+      "from": "p6",
+      "segment_index": 7,
+      "string": "t7 (min p6->p7): 1.4468s at p7_89 (attempt=102)",
+      "success": {
+        "found": 400,
+        "requested": 400
+      },
+      "to": "p7"
+    },
+    {
+      "best": {
+        "attempt": 42,
+        "joint_positions": [
+          0.7374252950567559,
+          -1.3678374529220583,
+          -0.43017507583842524,
+          -2.3822876498560146,
+          -0.4800702057298283,
+          1.0852921468817434,
+          -1.3338390032537637
+        ],
+        "solution_id": "p8_40",
+        "solution_index_0based": 39,
+        "solution_index_1based": 40,
+        "time_s": 1.5380834121991054
+      },
+      "from": "p7",
+      "segment_index": 8,
+      "string": "t8 (min p7->p8): 1.5381s at p8_40 (attempt=42)",
+      "success": {
+        "found": 400,
+        "requested": 400
+      },
+      "to": "p8"
+    }
+  ],
+  "start": {
+    "joint_positions": [
+      0.0,
+      -0.785,
+      0.0,
+      -2.356,
+      0.0,
+      1.571,
+      0.785
+    ],
+    "label": "ready",
+    "name": "p0"
+  },
+  "targets": [
+    {
+      "name": "p1",
+      "x": 0.14219310504239474,
+      "y": -0.004881379054485005,
+      "z": 0.16140484062072843
+    },
+    {
+      "name": "p2",
+      "x": -0.3571776240024099,
+      "y": 0.47486867875078204,
+      "z": 0.30925401054002255
+    },
+    {
+      "name": "p3",
+      "x": -0.13355511710524715,
+      "y": 0.1362574047599332,
+      "z": 0.41634313304481024
+    },
+    {
+      "name": "p4",
+      "x": -0.0609932937117473,
+      "y": 0.2736419954591764,
+      "z": 0.7107584772739164
+    },
+    {
+      "name": "p5",
+      "x": -0.23753838813937952,
+      "y": -0.1358122569875763,
+      "z": 0.26806171429185
+    },
+    {
+      "name": "p6",
+      "x": -0.16304146370185885,
+      "y": 0.2772148889182396,
+      "z": 0.8103390977706376
+    },
+    {
+      "name": "p7",
+      "x": -0.3653318835900752,
+      "y": -0.22985629298606447,
+      "z": 0.08281311546895556
+    },
+    {
+      "name": "p8",
+      "x": 0.1816562273147655,
+      "y": -0.1027078317896612,
+      "z": 0.6070540008897891
+    }
+  ],
+  "title": "Global optimum (DP; equivalent to exhaustive enumeration of all IK combinations)",
+  "total_time_s": 11.355018573642681,
+  "total_time_string": "Total time (t1+t2+...+tn) = 11.355019 s",
+  "units": {
+    "cartesian_position": "m",
+    "joint_position": "rad",
+    "time": "s"
+  }
+}
