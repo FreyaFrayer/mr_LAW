@@ -571,8 +571,8 @@ class IKBenchmarkComparePlayer(Node):
         gx, gy, gz = float(self.greedy_offset[0]), float(self.greedy_offset[1]), float(self.greedy_offset[2])
         hx, hy, hz = float(self.global_offset[0]), float(self.global_offset[1]), float(self.global_offset[2])
 
-        add_text(self.fixed_frame, 1, (gx, gy, gz + 0.9), "GREEDY", self.greedy_rgba, dz=0.0)
-        add_text(self.fixed_frame, 2, (hx, hy, hz + 0.9), "GLOBAL", self.global_rgba, dz=0.0)
+        add_text(self.fixed_frame, 1, (gx, gy, gz + 0.9), "GREEDY", self.gSreedy_rgba, dz=0.0)
+        add_text(self.fixed_frame, 2, (hx, hy, hz + 0.9), "OURS", self.global_rgba, dz=0.0)
 
         # Per-method point markers (in each robot base frame)
         def add_method_points(method_name: str, prefix: str, order: List[str], base_id: int, rgba) -> None:
@@ -666,7 +666,7 @@ class IKBenchmarkComparePlayer(Node):
         # Titles: one for each robot (placed above base; if overlapped, shift X slightly so they are readable)
         ox, oy, oz = self._offset_for_shared_markers()
         shift = 0.15
-        add_text(self.fixed_frame, "ik_benchmark_titles", 1, (ox - shift, oy, oz + 0.9), "GLOBAL", self.global_rgba, dz=0.0)
+        add_text(self.fixed_frame, "ik_benchmark_titles", 1, (ox - shift, oy, oz + 0.9), "OURS", self.global_rgba, dz=0.0)
         add_text(self.fixed_frame, "ik_benchmark_titles", 2, (ox + shift, oy, oz + 0.9), "GREEDY", self.greedy_rgba, dz=0.0)
 
         # Shared path points (white): p1..pN
@@ -695,7 +695,7 @@ class IKBenchmarkComparePlayer(Node):
         # Colored line strips (orders)
         def order_to_xyz(order: List[str]) -> List[Tuple[float, float, float]]:
             out: List[Tuple[float, float, float]] = []
-            
+
             if self._p0_xyz_fixed is not None:
                 out.append(self._p0_xyz_fixed)
 
