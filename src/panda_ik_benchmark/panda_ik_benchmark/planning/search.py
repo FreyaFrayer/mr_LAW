@@ -173,11 +173,11 @@ def global_optimal_prefix_dp(
         edge_est = 0
         for li in range(1, len(solutions_by_point)):
             edge_est += int(len(solutions_by_point[li - 1])) * int(len(solutions_by_point[li]))
-        if edge_est > 250_000:
-            raise RuntimeError(
-                "time_model=totg is too slow for DP at this scale "
-                f"(estimated edges={edge_est}). Use --time-model trapezoid (recommended)."
-            )
+        # if edge_est > 250_000:
+        #     raise RuntimeError(
+        #         "time_model=totg is too slow for DP at this scale "
+        #         f"(estimated edges={edge_est}). Use --time-model trapezoid (recommended)."
+        #     )
 
     q0 = np.asarray(start_q, dtype=float)
 

@@ -86,7 +86,7 @@ def generate_launch_description() -> LaunchDescription:
             DeclareLaunchArgument("ws_z_min", default_value="0.05"),
             DeclareLaunchArgument("ws_z_max", default_value="0.85"),
             DeclareLaunchArgument("min_sep", default_value="0.06"),
-            DeclareLaunchArgument("time_model", default_value="trapezoid"),
+            DeclareLaunchArgument("time_model", default_value="totg"),
             DeclareLaunchArgument("totg_vel_scale", default_value="1.0"),
             DeclareLaunchArgument("totg_acc_scale", default_value="1.0"),
             DeclareLaunchArgument("totg_path_tolerance", default_value="0.1"),

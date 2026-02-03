@@ -20,6 +20,7 @@ import json
 import math
 import subprocess
 import time
+from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Sequence
 
@@ -37,6 +38,11 @@ def _parse_int_list(s: str) -> List[int]:
 def _ensure_dir(p: Path) -> Path:
     p.mkdir(parents=True, exist_ok=True)
     return p
+
+
+def _now_str() -> str:
+    """Human-readable local time with timezone offset (e.g. 2026-01-26 14:03:21+08:00)."""
+    return datetime.now().astimezone().isoformat(sep=" ", timespec="seconds")
 
 
 def _find_latest_run_dir(data_root: Path) -> Path:
@@ -178,11 +184,11 @@ def main() -> int:
     )
     ap.add_argument("--pkg", default="panda_ik_benchmark", help="ROS2 package name.")
     ap.add_argument("--launch", default="ik_benchmark.launch.py", help="Launch file name.")
-    ap.add_argument("--num-points", type=int, default=5, help="Fixed num_points (default: 5).")
+    ap.add_argument("--num-points", type=int, default=25, help="Fixed num_points (default: 5).")
     ap.add_argument(
         "--num-solutions-list",
         type=str,
-        default="50,100,150,200,250",
+        default="100", # 50,100,150,200,250,300,400,500,700,900
         help="Comma-separated list of num_solutions values.",
     )
     ap.add_argument("--seed-start", type=int, default=7, help="Seed start (inclusive).")
@@ -211,6 +217,10 @@ def main() -> int:
     log_dir = Path(args.log_dir)
     extra_args = [a for a in args.extra.split() if a.strip()]
 
+    # progress counter across ALL runs (ns x seed)
+    total_rounds = len(num_solutions_list) * len(seeds)
+    round_idx = 0
+
     print("[batch] settings")
     print(f"  num_points         = {num_points}")
     print(f"  num_solutions_list  = {num_solutions_list}")
@@ -231,6 +241,11 @@ def main() -> int:
         print("=" * 80)
 
         for seed in seeds:
+            round_idx += 1
+            print(
+                f"\n[batch] 当前轮次/总轮次: {round_idx}/{total_rounds} | "
+                f"ns={ns}, seed={seed} | START @ {_now_str()}"
+            )
             # Unique data_root for each (ns, seed); benchmark still creates inner <timestamp> dir.
             run_data_root = base_data_root / f"np{num_points}" / f"ns{ns}" / f"seed{seed}"
 
@@ -251,7 +266,7 @@ def main() -> int:
             )
 
             if rc != 0:
-                print(f"[batch][ERROR] ros2 launch failed (returncode={rc}) for ns={ns}, seed={seed}")
+                print(f"[batch][{_now_str()}][ERROR] ros2 launch failed (returncode={rc}) for ns={ns}, seed={seed}")
                 rates_by_seed[seed] = [math.nan] * num_points
                 continue
 
@@ -260,10 +275,11 @@ def main() -> int:
                 rates = _extract_rates(summary_path, num_points_expected=num_points)
                 rates_by_seed[seed] = rates
 
-                print(f"[batch] summary: {summary_path}")
-                print(f"[batch] r[1..{num_points}] = {rates}")
+                end_ts = _now_str()
+                print(f"[batch][{end_ts}] summary: {summary_path}")
+                print(f"[batch][{end_ts}] r[1..{num_points}] = {rates}")
             except Exception as e:
-                print(f"[batch][ERROR] Failed to parse summary for ns={ns}, seed={seed}: {e}")
+                print(f"[batch][{_now_str()}][ERROR] Failed to parse summary for ns={ns}, seed={seed}: {e}")
                 rates_by_seed[seed] = [math.nan] * num_points
 
         # One CSV per num_solutions group

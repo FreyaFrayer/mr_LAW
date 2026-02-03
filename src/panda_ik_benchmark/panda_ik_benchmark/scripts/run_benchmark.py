@@ -41,10 +41,10 @@ def _parse_args() -> argparse.Namespace:
     p.add_argument(
         "--num-solutions",
         type=int,
-        default=200,
+        default=150,
         help="IK solutions per target point m (max: 3000).",
     )
-    p.add_argument("--num-spaces", type=int, default=20, help="Yaw spaces (default: 20).")
+    p.add_argument("--num-spaces", type=int, default=15, help="Yaw spaces (default: 20).")
     p.add_argument("--max-attempts", type=int, default=20000, help="Max IK attempts per point (default: 20000).")
     p.add_argument("--ik-timeout", type=float, default=0.05, help="IK timeout per attempt (s).")
     p.add_argument("--yaw-range", type=float, default=2.0 * math.pi, help="Yaw perturbation range (rad).")
@@ -56,7 +56,7 @@ def _parse_args() -> argparse.Namespace:
     p.add_argument(
         "--time-model",
         type=str,
-        default="trapezoid",
+        default="totg",
         choices=["auto", "totg", "trapezoid"],
         help="Segment time model: auto=prefer MoveIt TOTG, fallback to trapezoid; "
         "totg=force MoveIt TOTG; trapezoid=analytic rest-to-rest model.",
@@ -72,7 +72,7 @@ def _parse_args() -> argparse.Namespace:
     p.add_argument(
         "--resample-max",
         type=int,
-        default=200,
+        default=100,
         help="Max resampling trials per point when IK is infeasible / insufficient.",
     )
     p.add_argument(
@@ -84,7 +84,7 @@ def _parse_args() -> argparse.Namespace:
     p.add_argument(
         "--precheck-attempts",
         type=int,
-        default=1200,
+        default=1000,
         help="Quick feasibility check budget (attempts) before doing full 200-solution sampling.",
     )
     p.add_argument(

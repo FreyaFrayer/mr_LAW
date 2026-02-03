@@ -1,0 +1,77 @@
+[INFO] [launch]: All log files can be found below /home/cao/.ros/log/2026-01-25-01-31-45-536866-mvt-conda-35574
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [ik_benchmark-1]: process started with pid [35577]
+[ik_benchmark-1] [INFO] [1769275905.934989384] [moveit_369900911.moveit.py.cpp_initializer]: Initialize rclcpp
+[ik_benchmark-1] [INFO] [1769275905.935056263] [moveit_369900911.moveit.py.cpp_initializer]: Initialize node parameters
+[ik_benchmark-1] [INFO] [1769275905.935069086] [moveit_369900911.moveit.py.cpp_initializer]: Initialize node and executor
+[ik_benchmark-1] [INFO] [1769275905.941087320] [moveit_369900911.moveit.py.cpp_initializer]: Spin separate thread
+[ik_benchmark-1] [INFO] [1769275905.944181544] [moveit_369900911.moveit.ros.rdf_loader]: Loaded robot model in 0.00297604 seconds
+[ik_benchmark-1] [INFO] [1769275905.944230791] [moveit_369900911.moveit.core.robot_model]: Loading robot model 'panda'...
+[ik_benchmark-1] [INFO] [1769275905.954061593] [moveit_369900911.moveit.kinematics.kdl_kinematics_plugin]: Joint weights for group 'panda_arm': 1 1 1 1 1 1 1
+[ik_benchmark-1] [INFO] [1769275905.975541085] [moveit_369900911.moveit.ros.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'
+[ik_benchmark-1] [INFO] [1769275905.975642867] [moveit_369900911.moveit.ros.moveit_cpp]: Listening to 'joint_states' for joint states
+[ik_benchmark-1] [INFO] [1769275905.976694127] [moveit_369900911.moveit.ros.current_state_monitor]: Listening to joint states on topic 'joint_states'
+[ik_benchmark-1] [INFO] [1769275905.977008474] [moveit_369900911.moveit.ros.planning_scene_monitor]: Listening to '/attached_collision_object' for attached collision objects
+[ik_benchmark-1] [INFO] [1769275905.977023080] [moveit_369900911.moveit.ros.planning_scene_monitor]: Stopping existing planning scene publisher.
+[ik_benchmark-1] [INFO] [1769275905.977185935] [moveit_369900911.moveit.ros.planning_scene_monitor]: Stopped publishing maintained planning scene.
+[ik_benchmark-1] [INFO] [1769275905.977447056] [moveit_369900911.moveit.ros.planning_scene_monitor]: Publishing maintained planning scene on 'monitored_planning_scene'
+[ik_benchmark-1] [INFO] [1769275905.977511891] [moveit_369900911.moveit.ros.planning_scene_monitor]: Starting planning scene monitor
+[ik_benchmark-1] [INFO] [1769275905.978300270] [moveit_369900911.moveit.ros.planning_scene_monitor]: Listening to '/planning_scene'
+[ik_benchmark-1] [INFO] [1769275905.978340777] [moveit_369900911.moveit.ros.planning_scene_monitor]: Starting world geometry update monitor for collision objects, attached objects, octomap updates.
+[ik_benchmark-1] [INFO] [1769275905.978594778] [moveit_369900911.moveit.ros.planning_scene_monitor]: Listening to 'collision_object'
+[ik_benchmark-1] [INFO] [1769275905.978968624] [moveit_369900911.moveit.ros.planning_scene_monitor]: Listening to 'planning_scene_world' for planning scene world geometry
+[ik_benchmark-1] [WARN] [1769275905.979782051] [moveit_369900911.moveit.ros.occupancy_map_monitor]: Resolution not specified for Octomap. Assuming resolution = 0.1 instead
+[ik_benchmark-1] [ERROR] [1769275905.979821909] [moveit_369900911.moveit.ros.occupancy_map_monitor]: No 3D sensor plugin(s) defined for octomap updates
+[ik_benchmark-1] [INFO] [1769275905.991132339] [moveit_369900911.moveit.ros.planning_pipeline]: Successfully loaded planner 'OMPL'
+[ik_benchmark-1] [INFO] [1769275905.993602811] [panda_ik_benchmark]: Try loading adapter 'default_planning_request_adapters/ResolveConstraintFrames'
+[ik_benchmark-1] [INFO] [1769275905.994457814] [panda_ik_benchmark]: Loaded adapter 'default_planning_request_adapters/ResolveConstraintFrames'
+[ik_benchmark-1] [INFO] [1769275905.994501556] [panda_ik_benchmark]: Try loading adapter 'default_planning_request_adapters/ValidateWorkspaceBounds'
+[ik_benchmark-1] [INFO] [1769275905.994685745] [panda_ik_benchmark]: Loaded adapter 'default_planning_request_adapters/ValidateWorkspaceBounds'
+[ik_benchmark-1] [INFO] [1769275905.994695572] [panda_ik_benchmark]: Try loading adapter 'default_planning_request_adapters/CheckStartStateBounds'
+[ik_benchmark-1] [INFO] [1769275905.994715062] [panda_ik_benchmark]: Loaded adapter 'default_planning_request_adapters/CheckStartStateBounds'
+[ik_benchmark-1] [INFO] [1769275905.994719595] [panda_ik_benchmark]: Try loading adapter 'default_planning_request_adapters/CheckStartStateCollision'
+[ik_benchmark-1] [INFO] [1769275905.994729823] [panda_ik_benchmark]: Loaded adapter 'default_planning_request_adapters/CheckStartStateCollision'
+[ik_benchmark-1] [INFO] [1769275905.996995882] [panda_ik_benchmark]: Try loading adapter 'default_planning_response_adapters/AddTimeOptimalParameterization'
+[ik_benchmark-1] [INFO] [1769275905.998633631] [panda_ik_benchmark]: Loaded adapter 'default_planning_response_adapters/AddTimeOptimalParameterization'
+[ik_benchmark-1] [INFO] [1769275905.998657950] [panda_ik_benchmark]: Try loading adapter 'default_planning_response_adapters/ValidateSolution'
+[ik_benchmark-1] [INFO] [1769275906.000370146] [panda_ik_benchmark]: Loaded adapter 'default_planning_response_adapters/ValidateSolution'
+[ik_benchmark-1] [INFO] [1769275906.000387131] [panda_ik_benchmark]: Try loading adapter 'default_planning_response_adapters/DisplayMotionPath'
+[ik_benchmark-1] [INFO] [1769275906.000785206] [panda_ik_benchmark]: Loaded adapter 'default_planning_response_adapters/DisplayMotionPath'
+[ik_benchmark-1] [INFO] [1769275906.032279902] [moveit_369900911.moveit.plugins.simple_controller_manager]: Added FollowJointTrajectory controller for panda_arm_controller
+[ik_benchmark-1] [INFO] [1769275906.032453528] [moveit_369900911.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list
+[ik_benchmark-1] [INFO] [1769275906.032475274] [moveit_369900911.moveit.plugins.simple_controller_manager]: Returned 1 controllers in list
+[ik_benchmark-1] [INFO] [1769275906.032889098] [moveit_369900911.moveit.ros.trajectory_execution_manager]: Trajectory execution is managing controllers
+[ik_benchmark-1] [INFO] [1769275919.979404273] [moveit_369900911.moveit.ros.moveit_cpp]: Deleting MoveItCpp
+[ik_benchmark-1] [INFO] [1769275919.983850850] [moveit_369900911.moveit.ros.planning_scene_monitor]: Stopped publishing maintained planning scene.
+[ik_benchmark-1] [INFO] [1769275919.984452822] [moveit_369900911.moveit.ros.planning_scene_monitor]: Stopping world geometry monitor
+[ik_benchmark-1] [INFO] [1769275919.984606484] [moveit_369900911.moveit.ros.planning_scene_monitor]: Stopping planning scene monitor
+[ik_benchmark-1] Warning: class_loader.ClassLoader: SEVERE WARNING!!! Attempting to unload library while objects created by this loader exist in the heap! You should delete your objects before attempting to unload the library or destroying the ClassLoader. The library will NOT be unloaded.
+[ik_benchmark-1]          at line 127 in ./src/class_loader.cpp
+[ik_benchmark-1] [run] timestamp = 20260125_013145
+[ik_benchmark-1] [run] data dir   = data/batch_data/np6/ns50/seed10/20260125_013145
+[ik_benchmark-1] 
+[ik_benchmark-1] [select] searching a solvable target for p1 ...
+[ik_benchmark-1] [select] p1: (-0.114, 0.084, 0.570) found 50/50 (trials_used=1) -> p1.json
+[ik_benchmark-1] 
+[ik_benchmark-1] [select] searching a solvable target for p2 ...
+[ik_benchmark-1] [select] p2: (0.387, -0.363, 0.582) found 50/50 (trials_used=1) -> p2.json
+[ik_benchmark-1] 
+[ik_benchmark-1] [select] searching a solvable target for p3 ...
+[ik_benchmark-1] [select] p3: (-0.170, -0.527, 0.693) found 50/50 (trials_used=1) -> p3.json
+[ik_benchmark-1] 
+[ik_benchmark-1] [select] searching a solvable target for p4 ...
+[ik_benchmark-1] [select] p4: (-0.300, 0.420, 0.054) found 50/50 (trials_used=1) -> p4.json
+[ik_benchmark-1] 
+[ik_benchmark-1] [select] searching a solvable target for p5 ...
+[ik_benchmark-1] [select] p5: (-0.071, -0.239, 0.303) found 50/50 (trials_used=1) -> p5.json
+[ik_benchmark-1] 
+[ik_benchmark-1] [select] searching a solvable target for p6 ...
+[ik_benchmark-1] [select] p6: (-0.090, 0.211, 0.343) found 50/50 (trials_used=1) -> p6.json
+[ik_benchmark-1] 
+[ik_benchmark-1] [search] greedy (local) ...
+[ik_benchmark-1] 
+[ik_benchmark-1] [search] global DP prefix-optimal (enumeration-equivalent) ...
+[ik_benchmark-1] [search] summary -> summary.json
+[ik_benchmark-1] 
+[ik_benchmark-1] [done] bye.
+[INFO] [ik_benchmark-1]: process has finished cleanly [pid 35577]
